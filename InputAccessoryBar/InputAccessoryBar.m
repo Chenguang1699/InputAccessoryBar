@@ -62,9 +62,9 @@
 - (void)keyboardWillShow:(NSNotification*)notification
 {
     NSDictionary* keyboardInfo = [notification userInfo];
-    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    keyboardHeight = keyboardFrameBeginRect.size.height;
+    NSValue* keyboardFrameEnd = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardFrameEndRect = [keyboardFrameEnd CGRectValue];
+    keyboardHeight = keyboardFrameEndRect.size.height;
 }
 
 
